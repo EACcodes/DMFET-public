@@ -1,0 +1,1881 @@
+ argument  1 = cluster.inp
+ 
+
+
+============================== echo of input deck ==============================
+scratch_dir /scratch/kuangy
+memory total 16000 mb
+echo
+title "cluster"
+
+charge 2
+geometry units angstroms nocenter
+ Sn   5.41774950     5.41774950     5.41774950
+end
+
+basis cartesian
+#BASIS SET: (20s,16p,9d,2f) -> [9s,7p,4d,2f]
+Sn    S
+ 4238589.38529473            0.0001263
+ 673793.42495089             0.0008800
+ 170097.07647820             0.0038795
+  55609.70461290             0.0129455
+  21415.49971415             0.0369050
+   8977.66375890             0.0996500
+   3782.07819166             0.2737153
+   1562.92528277             0.6563110
+Sn    S
+    648.12338474            -0.5701632
+    272.54080122            -0.4629734
+Sn    S
+     46.76879883            -0.7902759
+     22.69311379            -0.2259347
+Sn    S
+      9.71239974            -0.6399296
+      4.80098504            -0.3811111
+Sn    S
+      1.87390748             0.6068691
+      0.82932636             0.4219649
+Sn    S
+     94.87261510             1.0000000
+Sn    S
+      0.20078915             1.0000000
+Sn    S
+      0.07538279             1.0000000
+Sn    S
+      0.0296000              1.0000000
+Sn    P
+  15934.47942881             0.0005873
+   3949.03996243             0.0045455
+   1382.89878270             0.0210093
+    566.21188582             0.0755028
+    244.15478655             0.2202092
+    107.89717825             0.4237674
+     48.96252198             0.4038944
+Sn    P
+     10.07938092             0.7252962
+      4.75501791             0.3096567
+Sn    P
+      2.25355772             0.6755163
+      1.01299742             0.3734322
+      0.15319025            -0.0228824
+Sn    P
+     21.42982885             1.0000000
+Sn    P
+      0.39772444             1.0000000
+Sn    P
+      0.05502644             1.0000000
+Sn    P
+      0.03017248             1.0000000
+Sn    D
+    439.54036499             0.0085018
+    130.83523828             0.0639522
+     48.78644670             0.2353001
+     20.01140691             0.4465600
+      8.53464202             0.3913098
+      3.38957135             0.0903839
+Sn    D
+      1.34061058             1.0000000
+Sn    D
+      0.47738533             1.0000000
+Sn    D
+      0.0453300              1.0000000
+Sn    F
+      1.4803000              1.0000000
+Sn    F
+      0.5110700              1.0000000
+end
+
+set embed logical true
+
+dft
+ iterations 300
+ xc xpbe96 cpbe96
+ #smear 0.001
+end
+
+task dft
+
+================================================================================
+
+
+                                         
+                                         
+ 
+ 
+              Northwest Computational Chemistry Package (NWChem) 6.5
+              ------------------------------------------------------
+ 
+ 
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+ 
+                              Copyright (c) 1994-2014
+                       Pacific Northwest National Laboratory
+                            Battelle Memorial Institute
+ 
+             NWChem is an open-source computational chemistry package
+                        distributed under the terms of the
+                      Educational Community License (ECL) 2.0
+             A copy of the license is included with this distribution
+                              in the LICENSE.TXT file
+ 
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were developed at the
+            EMSL at Pacific Northwest National Laboratory, a multiprogram
+            national laboratory, operated for the U.S. Department of Energy
+            by Battelle under Contract Number DE-AC05-76RL01830. Support
+            for this work was provided by the Department of Energy Office
+            of Biological and Environmental Research, Office of Basic
+            Energy Sciences, and the Office of Advanced Scientific Computing.
+
+
+           Job information
+           ---------------
+
+    hostname        = tiger-r13n2
+    program         = /scratch/gpfs/kuangy/compile/Nwchem_emb/Nwchem-6.5-nlemb/bin/LINUX64/nwchem
+    date            = Sat Aug 20 15:45:51 2016
+
+    compiled        = Sat_Aug_20_11:09:57_2016
+    source          = /scratch/gpfs/kuangy/compile/Nwchem_emb/Nwchem-6.5-nlemb
+    nwchem branch   = 6.5
+    nwchem revision = 26243
+    ga revision     = 10506
+    input           = cluster.inp
+    prefix          = cluster.
+    data base       = ./cluster.db
+    status          = startup
+    nproc           =        4
+    time left       =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap     =  524287996 doubles =   4000.0 Mbytes
+    stack    =  524288001 doubles =   4000.0 Mbytes
+    global   = 1048576000 doubles =   8000.0 Mbytes (distinct from heap & stack)
+    total    = 2097151997 doubles =  16000.0 Mbytes
+    verify   = yes
+    hardfail = no 
+
+
+           Directory information
+           ---------------------
+ 
+  0 permanent = .
+  0 scratch   = /scratch/kuangy
+ 
+ 
+ 
+ 
+                                NWChem Input Module
+                                -------------------
+ 
+ 
+                                      cluster
+                                      -------
+
+ Scaling coordinates for geometry "geometry" by  1.889725989
+ (inverse scale =  0.529177249)
+
+ 
+ 
+                             Geometry "geometry" -> ""
+                             -------------------------
+ 
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+ 
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 Sn                  50.0000     5.41774950     5.41774950     5.41774950
+ 
+      Atomic Mass 
+      ----------- 
+ 
+      Sn               117.901800
+ 
+
+ Effective nuclear repulsion energy (a.u.)       0.0000000000
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+   511.9031014883   511.9031014883   511.9031014883
+ 
+ 
+            XYZ format geometry
+            -------------------
+     1
+ geometry
+ Sn                    5.41774950     5.41774950     5.41774950
+ 
+                      Basis "ao basis" -> "" (cartesian)
+                      -----
+  Sn (Tin)
+  --------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  4.23858939E+06  0.000126
+  1 S  6.73793425E+05  0.000880
+  1 S  1.70097076E+05  0.003879
+  1 S  5.56097046E+04  0.012945
+  1 S  2.14154997E+04  0.036905
+  1 S  8.97766376E+03  0.099650
+  1 S  3.78207819E+03  0.273715
+  1 S  1.56292528E+03  0.656311
+ 
+  2 S  6.48123385E+02 -0.570163
+  2 S  2.72540801E+02 -0.462973
+ 
+  3 S  4.67687988E+01 -0.790276
+  3 S  2.26931138E+01 -0.225935
+ 
+  4 S  9.71239974E+00 -0.639930
+  4 S  4.80098504E+00 -0.381111
+ 
+  5 S  1.87390748E+00  0.606869
+  5 S  8.29326360E-01  0.421965
+ 
+  6 S  9.48726151E+01  1.000000
+ 
+  7 S  2.00789150E-01  1.000000
+ 
+  8 S  7.53827900E-02  1.000000
+ 
+  9 S  2.96000000E-02  1.000000
+ 
+ 10 P  1.59344794E+04  0.000587
+ 10 P  3.94903996E+03  0.004546
+ 10 P  1.38289878E+03  0.021009
+ 10 P  5.66211886E+02  0.075503
+ 10 P  2.44154787E+02  0.220209
+ 10 P  1.07897178E+02  0.423767
+ 10 P  4.89625220E+01  0.403894
+ 
+ 11 P  1.00793809E+01  0.725296
+ 11 P  4.75501791E+00  0.309657
+ 
+ 12 P  2.25355772E+00  0.675516
+ 12 P  1.01299742E+00  0.373432
+ 12 P  1.53190250E-01 -0.022882
+ 
+ 13 P  2.14298288E+01  1.000000
+ 
+ 14 P  3.97724440E-01  1.000000
+ 
+ 15 P  5.50264400E-02  1.000000
+ 
+ 16 P  3.01724800E-02  1.000000
+ 
+ 17 D  4.39540365E+02  0.008502
+ 17 D  1.30835238E+02  0.063952
+ 17 D  4.87864467E+01  0.235300
+ 17 D  2.00114069E+01  0.446560
+ 17 D  8.53464202E+00  0.391310
+ 17 D  3.38957135E+00  0.090384
+ 
+ 18 D  1.34061058E+00  1.000000
+ 
+ 19 D  4.77385330E-01  1.000000
+ 
+ 20 D  4.53300000E-02  1.000000
+ 
+ 21 F  1.48030000E+00  1.000000
+ 
+ 22 F  5.11070000E-01  1.000000
+ 
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ Sn                      user specified             22       74   9s7p4d2f
+
+
+  pbe96 is a nonlocal functional; adding pw91lda local functional. 
+ 
+                                 NWChem DFT Module
+                                 -----------------
+ 
+ 
+                                      cluster
+ 
+ 
+
+
+ Summary of "ao basis" -> "ao basis" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ Sn                      user specified             22       74   9s7p4d2f
+
+
+ Loading parameters from emb.in...
+ shifted vector is provded
+  rlatv=
+     0.204761E+02     0.000000E+00     0.000000E+00
+     0.000000E+00     0.204761E+02     0.000000E+00
+     0.000000E+00     0.000000E+00     0.204761E+02
+  vol=    8585.05845315311     
+  Caching 1-el integrals 
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   0   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   1   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   2   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   0
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   1
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   2
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   3
+ Computing <a|V_ext|b> (i_cent, j_cent, ibas, jbas, Li, Lj)
+                             1       1     1     1   3   3
+ 
+            General Information
+            -------------------
+          SCF calculation type: DFT
+          Wavefunction type:  closed shell.
+          No. of atoms     :     1
+          No. of electrons :    48
+           Alpha electrons :    24
+            Beta electrons :    24
+          Charge           :     2
+          Spin multiplicity:     1
+          Use of symmetry is: off; symmetry adaption is: off
+          Maximum number of iterations: 300
+          AO basis - number of functions:    74
+                     number of shells:    22
+          Convergence on energy requested: 1.00D-06
+          Convergence on density requested: 1.00D-05
+          Convergence on gradient requested: 5.00D-04
+ 
+              XC Information
+              --------------
+          PerdewBurkeErnzerhof Exchange Functional  1.000          
+            Perdew 1991 LDA Correlation Functional  1.000 local    
+           PerdewBurkeErnz. Correlation Functional  1.000 non-local
+ 
+             Grid Information
+             ----------------
+          Grid used for XC integration:  medium    
+          Radial quadrature: Mura-Knowles        
+          Angular quadrature: Lebedev. 
+          Tag              B.-S. Rad. Rad. Pts. Rad. Cut. Ang. Pts.
+          ---              ---------- --------- --------- ---------
+          Sn                  1.45      123          10.0       590
+          Grid pruning is: on 
+          Number of quadrature shells:   123
+          Spatial weights used:  Erf1
+ 
+          Convergence Information
+          -----------------------
+          Convergence aids based upon iterative change in 
+          total energy or number of iterations. 
+          Levelshifting, if invoked, occurs when the 
+          HOMO/LUMO gap drops below (HL_TOL): 1.00D-02
+          DIIS, if invoked, will attempt to extrapolate 
+          using up to (NFOCK): 10 stored Fock matrices.
+
+                    Damping( 0%)  Levelshifting(0.5)       DIIS
+                  --------------- ------------------- ---------------
+          dE  on:    start            ASAP                start   
+          dE off:    2 iters        300 iters           300 iters 
+
+ 
+      Screening Tolerance Information
+      -------------------------------
+          Density screening/tol_rho: 1.00D-10
+          AO Gaussian exp screening on grid/accAOfunc:  14
+          CD Gaussian exp screening on grid/accCDfunc:  20
+          XC Gaussian exp screening on grid/accXCfunc:  20
+          Schwarz screening/accCoul: 1.00D-08
+
+ 
+      Superposition of Atomic Density Guess
+      -------------------------------------
+ 
+ Sum of atomic energies:       -6017.53776087
+
+ Renormalizing density from      50.00 to     48
+ 
+      Non-variational initial energy
+      ------------------------------
+
+ Total energy =   -5875.845824
+ 1-e energy   =   -7925.336163
+ 2-e energy   =    2049.490339
+ HOMO         =      -1.490488
+ LUMO         =      -0.889341
+ 
+   Time after variat. SCF:    304.7
+   Time prior to 1st pass:    304.7
+
+ Grid_pts file          = /scratch/kuangy/cluster.gridpts.0
+ Record size in doubles =  12289        No. of grid_pts per rec  =   3070
+ Max. records in memory =      8        Max. recs in file   = 253312716
+
+
+           Memory utilization after 1st SCF pass: 
+           Heap Space remaining (MW):      516.31           516307644
+          Stack Space remaining (MW):      524.29           524287516
+
+   convergence    iter        energy       DeltaE   RMS-Dens  Diis-err    time
+ ---------------- ----- ----------------- --------- --------- ---------  ------
+ d= 0,ls=0.0,diis     1  -6032.3777349073 -6.03D+03  1.22D-01  9.89D+01   305.7
+ d= 0,ls=0.0,diis     2  -6033.0103919414 -6.33D-01  4.85D-02  1.18D+01   306.7
+ d= 0,ls=0.0,diis     3  -6033.3707920898 -3.60D-01  1.21D-02  5.26D-01   307.7
+ d= 0,ls=0.0,diis     4  -6033.3987704296 -2.80D-02  3.64D-04  5.74D-04   308.7
+ d= 0,ls=0.0,diis     5  -6033.3988002280 -2.98D-05  2.00D-05  1.44D-07   309.7
+ d= 0,ls=0.0,diis     6  -6033.3988002401 -1.21D-08  1.16D-06  1.01D-09   310.7
+
+
+         Total DFT energy =    -6033.398800240109
+      One electron energy =    -8232.997561155471
+           Coulomb energy =     2358.300034404836
+    Exchange-Corr. energy =     -158.701273489474
+ Nuclear repulsion energy =        0.000000000000
+
+ Numeric. integr. density =       48.000000001157
+
+     Total iterative time =      6.0s
+
+
+ 
+                       DFT Final Molecular Orbital Analysis
+                       ------------------------------------
+ 
+ Vector   14  Occ=2.000000D+00  E=-1.968277D+01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 3.2D-02
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    31      0.867706  1 Sn dxx               34     -0.867623  1 Sn dyy        
+ 
+ Vector   15  Occ=2.000000D+00  E=-5.715852D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 2.1D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     4      1.775617  1 Sn s                  5      1.461446  1 Sn s          
+     3     -0.454221  1 Sn s                 31      0.229374  1 Sn dxx        
+    34      0.229374  1 Sn dyy               36      0.229863  1 Sn dzz        
+ 
+ Vector   16  Occ=2.000000D+00  E=-4.320198D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 2.4D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    18      1.149594  1 Sn pz                15     -0.469024  1 Sn pz         
+    24      0.412776  1 Sn pz                21     -0.230957  1 Sn pz         
+    12      0.223324  1 Sn pz                67     -0.160855  1 Sn fxxz       
+    72     -0.160855  1 Sn fyyz              74     -0.160785  1 Sn fzzz       
+ 
+ Vector   17  Occ=2.000000D+00  E=-4.319746D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 2.4D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    17     -0.816372  1 Sn py                16      0.809122  1 Sn px         
+    14      0.333351  1 Sn py                13     -0.330391  1 Sn px         
+    23     -0.292652  1 Sn py                22      0.290054  1 Sn px         
+    20      0.163910  1 Sn py                19     -0.162455  1 Sn px         
+    11     -0.158615  1 Sn py                10      0.157206  1 Sn px         
+ 
+ Vector   18  Occ=2.000000D+00  E=-4.319719D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 2.4D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    16      0.816222  1 Sn px                17      0.809319  1 Sn py         
+    13     -0.333299  1 Sn px                14     -0.330481  1 Sn py         
+    22      0.292608  1 Sn px                23      0.290134  1 Sn py         
+    19     -0.163870  1 Sn px                20     -0.162484  1 Sn py         
+    10      0.158582  1 Sn px                11      0.157241  1 Sn py         
+ 
+ Vector   19  Occ=2.000000D+00  E=-1.349642D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 4.6D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    38      1.476640  1 Sn dxy               44      0.400161  1 Sn dxy        
+    32     -0.314432  1 Sn dxy        
+ 
+ Vector   20  Occ=2.000000D+00  E=-1.348647D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 4.6D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    39      1.044857  1 Sn dxz               41     -1.043111  1 Sn dyz        
+    45      0.283392  1 Sn dxz               47     -0.282918  1 Sn dyz        
+    33     -0.222388  1 Sn dxz               35      0.222017  1 Sn dyz        
+ 
+ Vector   21  Occ=2.000000D+00  E=-1.348634D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 4.6D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    39      1.043114  1 Sn dxz               41      1.044840  1 Sn dyz        
+    45      0.282930  1 Sn dxz               47      0.283398  1 Sn dyz        
+    33     -0.222023  1 Sn dxz               35     -0.222390  1 Sn dyz        
+ 
+ Vector   22  Occ=2.000000D+00  E=-1.333329D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 4.6D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    37      0.740392  1 Sn dxx               40     -0.740399  1 Sn dyy        
+    43      0.197704  1 Sn dxx               46     -0.197706  1 Sn dyy        
+    31     -0.157676  1 Sn dxx               34      0.157677  1 Sn dyy        
+ 
+ Vector   23  Occ=2.000000D+00  E=-1.332452D+00
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 4.6D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    42      0.854202  1 Sn dzz               37     -0.427813  1 Sn dxx        
+    40     -0.427802  1 Sn dyy               48      0.228528  1 Sn dzz        
+    36     -0.181313  1 Sn dzz        
+ 
+ Vector   24  Occ=2.000000D+00  E=-9.071349D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.6D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     5      0.900237  1 Sn s                  7     -0.854382  1 Sn s          
+     4      0.708497  1 Sn s                  8     -0.194757  1 Sn s          
+     3     -0.158798  1 Sn s          
+ 
+ Vector   25  Occ=0.000000D+00  E=-6.043198D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 2.7D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    25      0.629176  1 Sn px                26     -0.629348  1 Sn py         
+    66     -0.520293  1 Sn fxxy              68      0.520151  1 Sn fxyy       
+    70      0.520503  1 Sn fxzz              73     -0.520646  1 Sn fyzz       
+    65      0.492267  1 Sn fxxx              71     -0.492402  1 Sn fyyy       
+    22     -0.475602  1 Sn px                23      0.475732  1 Sn py         
+    28     -0.290302  1 Sn px                29      0.290381  1 Sn py         
+    16     -0.249066  1 Sn px                17      0.249135  1 Sn py         
+    55      0.154545  1 Sn fxxx              61     -0.154587  1 Sn fyyy       
+    56     -0.151378  1 Sn fxxy              58      0.151336  1 Sn fxyy       
+    60      0.151055  1 Sn fxzz              63     -0.151096  1 Sn fyzz       
+ 
+ Vector   26  Occ=0.000000D+00  E=-6.043171D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.5D+00, r^2= 2.7D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    25      0.629353  1 Sn px                26      0.629182  1 Sn py         
+    66      0.520154  1 Sn fxxy              68      0.520294  1 Sn fxyy       
+    70      0.520647  1 Sn fxzz              73      0.520506  1 Sn fyzz       
+    65      0.492403  1 Sn fxxx              71      0.492270  1 Sn fyyy       
+    22     -0.475739  1 Sn px                23     -0.475610  1 Sn py         
+    28     -0.290383  1 Sn px                29     -0.290304  1 Sn py         
+    16     -0.249133  1 Sn px                17     -0.249066  1 Sn py         
+    55      0.154586  1 Sn fxxx              61      0.154544  1 Sn fyyy       
+    56      0.151336  1 Sn fxxy              58      0.151377  1 Sn fxyy       
+    60      0.151095  1 Sn fxzz              63      0.151054  1 Sn fyzz       
+ 
+ Vector   27  Occ=0.000000D+00  E=-6.038952D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 2.7D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    27      0.886110  1 Sn pz                67      0.737614  1 Sn fxxz       
+    72      0.737614  1 Sn fyyz              74      0.698043  1 Sn fzzz       
+    24     -0.673071  1 Sn pz                30     -0.408914  1 Sn pz         
+    18     -0.352869  1 Sn pz                64      0.218805  1 Sn fzzz       
+    57      0.214038  1 Sn fxxz              62      0.214038  1 Sn fyyz       
+ 
+ Vector   28  Occ=0.000000D+00  E=-3.111311D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 8.9D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     7      1.143085  1 Sn s                  9     -0.860989  1 Sn s          
+     5     -0.486908  1 Sn s                  4     -0.315732  1 Sn s          
+     8     -0.291836  1 Sn s          
+ 
+ Vector   29  Occ=0.000000D+00  E=-2.497310D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.2D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    50      1.377546  1 Sn dxy               30     -0.808022  1 Sn pz         
+    27      0.277525  1 Sn pz                67      0.266186  1 Sn fxxz       
+    72      0.266186  1 Sn fyyz              74      0.239971  1 Sn fzzz       
+    24     -0.223886  1 Sn pz                38     -0.219080  1 Sn dxy        
+ 
+ Vector   30  Occ=0.000000D+00  E=-2.494569D-01
+              MO Center=  5.4D+00,  5.4D+00,  6.7D+00, r^2= 1.0D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    51      0.979332  1 Sn dxz               53     -0.974840  1 Sn dyz        
+    28      0.563804  1 Sn px                29     -0.566402  1 Sn py         
+    25     -0.191302  1 Sn px                26      0.192183  1 Sn py         
+    66      0.190295  1 Sn fxxy              73      0.190815  1 Sn fyzz       
+    68     -0.189422  1 Sn fxyy              70     -0.189940  1 Sn fxzz       
+    65     -0.170542  1 Sn fxxx              71      0.171328  1 Sn fyyy       
+    22      0.159887  1 Sn px                23     -0.160624  1 Sn py         
+    39     -0.155951  1 Sn dxz               41      0.155236  1 Sn dyz        
+ 
+ Vector   31  Occ=0.000000D+00  E=-2.494567D-01
+              MO Center=  5.4D+00,  5.4D+00,  4.1D+00, r^2= 1.0D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    51      0.974848  1 Sn dxz               53      0.979339  1 Sn dyz        
+    28     -0.566399  1 Sn px                29     -0.563801  1 Sn py         
+    25      0.192186  1 Sn px                26      0.191305  1 Sn py         
+    70      0.190813  1 Sn fxzz              66      0.189421  1 Sn fxxy       
+    68      0.190294  1 Sn fxyy              73      0.189938  1 Sn fyzz       
+    65      0.171326  1 Sn fxxx              71      0.170540  1 Sn fyyy       
+    22     -0.160624  1 Sn px                23     -0.159888  1 Sn py         
+    39     -0.155236  1 Sn dxz               41     -0.155951  1 Sn dyz        
+ 
+ Vector   32  Occ=0.000000D+00  E=-2.439937D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    49      0.855345  1 Sn dxx               52     -0.855353  1 Sn dyy        
+ 
+ Vector   33  Occ=0.000000D+00  E=-2.437743D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    54      0.965742  1 Sn dzz               49     -0.515730  1 Sn dxx        
+    52     -0.515719  1 Sn dyy        
+ 
+ Vector   34  Occ=0.000000D+00  E=-2.302516D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.3D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    30      1.160782  1 Sn pz                50      1.007724  1 Sn dxy        
+    27     -0.455531  1 Sn pz                67     -0.314872  1 Sn fxxz       
+    72     -0.314872  1 Sn fyyz              74     -0.313056  1 Sn fzzz       
+    24      0.247394  1 Sn pz         
+ 
+ Vector   35  Occ=0.000000D+00  E=-2.298743D-01
+              MO Center=  5.4D+00,  5.4D+00,  4.1D+00, r^2= 1.1D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    28      0.820258  1 Sn px                29     -0.818794  1 Sn py         
+    51     -0.707742  1 Sn dxz               53      0.709008  1 Sn dyz        
+    25     -0.318889  1 Sn px                26      0.318320  1 Sn py         
+    66      0.226794  1 Sn fxxy              68     -0.227199  1 Sn fxyy       
+    70     -0.227210  1 Sn fxzz              73      0.226804  1 Sn fyzz       
+    65     -0.225546  1 Sn fxxx              71      0.225144  1 Sn fyyy       
+    22      0.179491  1 Sn px                23     -0.179171  1 Sn py         
+ 
+ Vector   36  Occ=0.000000D+00  E=-2.298738D-01
+              MO Center=  5.4D+00,  5.4D+00,  6.7D+00, r^2= 1.1D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    28      0.818807  1 Sn px                29      0.820271  1 Sn py         
+    51      0.708998  1 Sn dxz               53      0.707733  1 Sn dyz        
+    25     -0.318331  1 Sn px                26     -0.318900  1 Sn py         
+    66     -0.227202  1 Sn fxxy              68     -0.226796  1 Sn fxyy       
+    70     -0.226807  1 Sn fxzz              73     -0.227212  1 Sn fyzz       
+    65     -0.225146  1 Sn fxxx              71     -0.225548  1 Sn fyyy       
+    22      0.179176  1 Sn px                23      0.179497  1 Sn py         
+ 
+ Vector   37  Occ=0.000000D+00  E=-1.540037D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 2.5D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     9     22.278357  1 Sn s                  8    -13.977617  1 Sn s          
+    49     -5.726824  1 Sn dxx               52     -5.726824  1 Sn dyy        
+    54     -5.738195  1 Sn dzz                7      3.351762  1 Sn s          
+     5     -0.645853  1 Sn s                 43     -0.358275  1 Sn dxx        
+    46     -0.358275  1 Sn dyy               48     -0.358947  1 Sn dzz        
+     4     -0.213365  1 Sn s          
+ 
+ Vector   38  Occ=0.000000D+00  E=-2.537347D-02
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    25      1.652224  1 Sn px                26     -1.650375  1 Sn py         
+    28     -1.334348  1 Sn px                29      1.332855  1 Sn py         
+    66      0.728436  1 Sn fxxy              68     -0.729253  1 Sn fxyy       
+    70     -0.730022  1 Sn fxzz              73      0.729205  1 Sn fyzz       
+    65     -0.704693  1 Sn fxxx              71      0.703904  1 Sn fyyy       
+    22      0.610460  1 Sn px                23     -0.609776  1 Sn py         
+    55     -0.197784  1 Sn fxxx              56      0.198416  1 Sn fxxy       
+    58     -0.198638  1 Sn fxyy              60     -0.198283  1 Sn fxzz       
+    61      0.197562  1 Sn fyyy              63      0.198062  1 Sn fyzz       
+    16      0.184205  1 Sn px                17     -0.183999  1 Sn py         
+ 
+ Vector   39  Occ=0.000000D+00  E=-2.537119D-02
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    25      1.650370  1 Sn px                26      1.652222  1 Sn py         
+    28     -1.332848  1 Sn px                29     -1.334343  1 Sn py         
+    66     -0.729266  1 Sn fxxy              68     -0.728448  1 Sn fxyy       
+    70     -0.729216  1 Sn fxzz              73     -0.730034  1 Sn fyzz       
+    65     -0.703915  1 Sn fxxx              71     -0.704704  1 Sn fyyy       
+    22      0.609793  1 Sn px                23      0.610477  1 Sn py         
+    56     -0.198641  1 Sn fxxy              55     -0.197564  1 Sn fxxx       
+    58     -0.198419  1 Sn fxyy              60     -0.198063  1 Sn fxzz       
+    61     -0.197786  1 Sn fyyy              63     -0.198285  1 Sn fyzz       
+    16      0.183999  1 Sn px                17      0.184206  1 Sn py         
+ 
+ Vector   40  Occ=0.000000D+00  E=-2.482055D-02
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    27      2.335003  1 Sn pz                30     -1.881490  1 Sn pz         
+    67     -1.028783  1 Sn fxxz              72     -1.028783  1 Sn fyyz       
+    74     -0.995778  1 Sn fzzz              24      0.860070  1 Sn pz         
+    57     -0.279985  1 Sn fxxz              62     -0.279985  1 Sn fyyz       
+    64     -0.278924  1 Sn fzzz              18      0.260384  1 Sn pz         
+ 
+ Vector   41  Occ=0.000000D+00  E= 1.628705D-02
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.7D+01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     9     24.945052  1 Sn s                  8    -10.304271  1 Sn s          
+    49     -7.428220  1 Sn dxx               52     -7.428220  1 Sn dyy        
+    54     -7.423866  1 Sn dzz                7     -2.770999  1 Sn s          
+     5      0.749511  1 Sn s                  4      0.357762  1 Sn s          
+    43      0.232682  1 Sn dxx               46      0.232682  1 Sn dyy        
+    48      0.232314  1 Sn dzz        
+ 
+ Vector   42  Occ=0.000000D+00  E= 4.557442D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    69      3.375642  1 Sn fxyz               7      1.112431  1 Sn s          
+     9     -1.007306  1 Sn s                 59      0.784245  1 Sn fxyz       
+    49      0.322012  1 Sn dxx               52      0.322012  1 Sn dyy        
+    54      0.321736  1 Sn dzz               43     -0.283765  1 Sn dxx        
+    46     -0.283765  1 Sn dyy               48     -0.283510  1 Sn dzz        
+ 
+ Vector   43  Occ=0.000000D+00  E= 4.788341D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    70     -1.215507  1 Sn fxzz              73     -1.218668  1 Sn fyzz       
+    66      1.170704  1 Sn fxxy              68      1.167628  1 Sn fxyy       
+    60     -0.288967  1 Sn fxzz              63     -0.289718  1 Sn fyzz       
+    56      0.279729  1 Sn fxxy              58      0.278994  1 Sn fxyy       
+ 
+ Vector   44  Occ=0.000000D+00  E= 4.788343D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    70      1.218664  1 Sn fxzz              73     -1.215503  1 Sn fyzz       
+    66      1.167633  1 Sn fxxy              68     -1.170709  1 Sn fxyy       
+    60      0.289717  1 Sn fxzz              63     -0.288966  1 Sn fyzz       
+    56      0.278995  1 Sn fxxy              58     -0.279730  1 Sn fxyy       
+ 
+ Vector   45  Occ=0.000000D+00  E= 4.795241D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    67      1.688057  1 Sn fxxz              72     -1.688056  1 Sn fyyz       
+    57      0.402065  1 Sn fxxz              62     -0.402065  1 Sn fyyz       
+ 
+ Vector   46  Occ=0.000000D+00  E= 4.875886D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.3D+00, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    68     -0.933524  1 Sn fxyy              66      0.921006  1 Sn fxxy       
+    70     -0.871599  1 Sn fxzz              73      0.859963  1 Sn fyzz       
+    65      0.619729  1 Sn fxxx              71     -0.611436  1 Sn fyyy       
+    47     -0.297592  1 Sn dyz               45      0.293610  1 Sn dxz        
+    41      0.240511  1 Sn dyz               39     -0.237293  1 Sn dxz        
+    58     -0.221170  1 Sn fxyy              56      0.218204  1 Sn fxxy       
+    60     -0.205034  1 Sn fxzz              63      0.202297  1 Sn fyzz       
+    55      0.150155  1 Sn fxxx       
+ 
+ Vector   47  Occ=0.000000D+00  E= 4.875889D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.5D+00, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    66      0.933530  1 Sn fxxy              68      0.921012  1 Sn fxyy       
+    73      0.871596  1 Sn fyzz              70      0.859959  1 Sn fxzz       
+    71     -0.619731  1 Sn fyyy              65     -0.611439  1 Sn fxxx       
+    45      0.297566  1 Sn dxz               47      0.293584  1 Sn dyz        
+    39     -0.240492  1 Sn dxz               41     -0.237274  1 Sn dyz        
+    56      0.221172  1 Sn fxxy              58      0.218206  1 Sn fxyy       
+    63      0.205034  1 Sn fyzz              60      0.202297  1 Sn fxzz       
+    61     -0.150156  1 Sn fyyy       
+ 
+ Vector   48  Occ=0.000000D+00  E= 4.886205D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.4D+00, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    67      1.271541  1 Sn fxxz              72      1.271542  1 Sn fyyz       
+    74     -0.868000  1 Sn fzzz              44      0.418791  1 Sn dxy        
+    38     -0.338208  1 Sn dxy               57      0.300597  1 Sn fxxz       
+    62      0.300597  1 Sn fyyz              64     -0.209326  1 Sn fzzz       
+ 
+ Vector   49  Occ=0.000000D+00  E= 5.806797D-01
+              MO Center=  5.4D+00,  5.4D+00,  5.5D+00, r^2= 1.6D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+    45      1.561975  1 Sn dxz               47     -1.564302  1 Sn dyz        
+    39     -1.226855  1 Sn dxz               41      1.228683  1 Sn dyz        
+    51     -0.273694  1 Sn dxz               53      0.274102  1 Sn dyz        
+    66     -0.170745  1 Sn fxxy              68      0.171000  1 Sn fxyy       
+    70      0.170696  1 Sn fxzz              73     -0.170443  1 Sn fyzz       
+    33      0.167919  1 Sn dxz               35     -0.168169  1 Sn dyz        
+ 
+
+ Task  times  cpu:      310.7s     wall:      311.5s
+ 
+ 
+                                NWChem Input Module
+                                -------------------
+ 
+ 
+ Summary of allocated global arrays
+-----------------------------------
+  No active global arrays
+
+
+
+                         GA Statistics for process    0
+                         ------------------------------
+
+       create   destroy   get      put      acc     scatter   gather  read&inc
+calls:  126      126     1632     1954      166        0        0      397     
+number of processes/call 1.14e+00 1.09e+00 1.47e+00 0.00e+00 0.00e+00
+bytes total:             1.43e+07 4.00e+06 7.27e+06 0.00e+00 0.00e+00 3.18e+03
+bytes remote:            5.66e+05 2.23e+05 5.45e+05 0.00e+00 0.00e+00 0.00e+00
+Max memory consumed for GA by this process: 1577088 bytes
+ 
+ 
+ 
+                                     CITATION
+                                     --------
+                Please cite the following reference when publishing
+                           results obtained with NWChem:
+ 
+                 M. Valiev, E.J. Bylaska, N. Govind, K. Kowalski,
+              T.P. Straatsma, H.J.J. van Dam, D. Wang, J. Nieplocha,
+                        E. Apra, T.L. Windus, W.A. de Jong
+                 "NWChem: a comprehensive and scalable open-source
+                  solution for large scale molecular simulations"
+                      Comput. Phys. Commun. 181, 1477 (2010)
+                           doi:10.1016/j.cpc.2010.04.018
+ 
+                                      AUTHORS
+                                      -------
+          E. Apra, E. J. Bylaska, W. A. de Jong, N. Govind, K. Kowalski,
+       T. P. Straatsma, M. Valiev, H. J. J. van Dam, D. Wang, T. L. Windus,
+        J. Hammond, J. Autschbach, K. Bhaskaran-Nair, J. Brabec, K. Lopata,
+        S. Krishnamoorthy, W. Ma, M. Klemm, O. Villa, Y. Chen, V. Anisimov,
+    F. Aquino, S. Hirata, M. T. Hackler, T. Risthaus, M. Malagoli, A. Marenich,
+   A. Otero-de-la-Roza, J. Mullin, P. Nichols, R. Peverati, J. Pittner, Y. Zhao,
+         P.-D. Fan, A. Fonari, R. J. Harrison, M. Dupuis, D. Silverstein,
+    D. M. A. Smith, J. Nieplocha, V. Tipparaju, M. Krishnan, B. E. Van Kuiken,
+        A. Vazquez-Mayagoitia, L. Jensen, M. Swart, Q. Wu, T. Van Voorhis,
+     A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown, G. Cisneros, G. I. Fann,
+   H. Fruchtl, J. Garza, K. Hirao, R. A. Kendall, J. A. Nichols, K. Tsemekhman,
+    K. Wolinski, J. Anchell, D. E. Bernholdt, P. Borowski, T. Clark, D. Clerc,
+   H. Dachsel, M. J. O. Deegan, K. Dyall, D. Elwood, E. Glendening, M. Gutowski,
+   A. C. Hess, J. Jaffe, B. G. Johnson, J. Ju, R. Kobayashi, R. Kutteh, Z. Lin,
+   R. Littlefield, X. Long, B. Meng, T. Nakajima, S. Niu, L. Pollack, M. Rosing,
+   K. Glaesemann, G. Sandrone, M. Stave, H. Taylor, G. Thomas, J. H. van Lenthe,
+                               A. T. Wong, Z. Zhang.
+
+ Total times  cpu:      310.7s     wall:      312.1s
+MA_summarize_allocated_blocks: starting scan ...
+heap block 'kz', handle 31, address 0x2af691d1ff08:
+	type of elements:		double precision
+	number of elements:		878400
+	address of client space:	0x2af691d1ff80
+	index for client space:		5904786135633
+	total number of bytes:		7027328
+heap block 'ky', handle 30, address 0x2af69166c488:
+	type of elements:		double precision
+	number of elements:		878400
+	address of client space:	0x2af69166c500
+	index for client space:		5904785257217
+	total number of bytes:		7027328
+heap block 'kx', handle 24, address 0x2af690fb8a08:
+	type of elements:		double precision
+	number of elements:		878400
+	address of client space:	0x2af690fb8a80
+	index for client space:		5904784378801
+	total number of bytes:		7027328
+heap block 'phase', handle 23, address 0x2af690251588:
+	type of elements:		double precision complex
+	number of elements:		878400
+	address of client space:	0x2af690251600
+	index for client space:		2952391310989
+	total number of bytes:		14054528
+heap block 'vr', handle 22, address 0x2af68f522508:
+	type of elements:		double precision
+	number of elements:		1728000
+	address of client space:	0x2af68f522580
+	index for client space:		5904780893969
+	total number of bytes:		13824128
+heap block 'vq', handle 21, address 0x2af68e7bb0a8:
+	type of elements:		double precision complex
+	number of elements:		878400
+	address of client space:	0x2af68e7bb100
+	index for client space:		2952389568573
+	total number of bytes:		14054496
+MA_summarize_allocated_blocks: scan completed: 6 heap blocks, 0 stack blocks
+MA usage statistics:
+
+	allocation statistics:
+					      heap	     stack
+					      ----	     -----
+	current number of blocks	         6	         0
+	maximum number of blocks	        28	        50
+	current total bytes		  63015136	         0
+	maximum total bytes		  63842144	  22512616
+	maximum total K-bytes		     63843	     22513
+	maximum total M-bytes		        64	        23

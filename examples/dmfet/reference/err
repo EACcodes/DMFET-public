@@ -1,0 +1,8 @@
+/scratch/gpfs/kuangy/programs/python_libs/lib64/python2.6/site-packages/scipy/sparse/csgraph/__init__.py:148: RuntimeWarning: compiletime version 2.6 of module 'scipy.sparse.csgraph._shortest_path' does not match runtime version 2.7
+  from ._shortest_path import shortest_path, floyd_warshall, dijkstra,\
+/scratch/gpfs/kuangy/programs/python_libs/lib64/python2.6/site-packages/scipy/sparse/csgraph/_validation.py:5: RuntimeWarning: compiletime version 2.6 of module 'scipy.sparse.csgraph._tools' does not match runtime version 2.7
+  from ._tools import csgraph_to_dense, csgraph_from_dense,\
+/scratch/gpfs/kuangy/programs/python_libs/lib64/python2.6/site-packages/scipy/sparse/csgraph/__init__.py:150: RuntimeWarning: compiletime version 2.6 of module 'scipy.sparse.csgraph._traversal' does not match runtime version 2.7
+  from ._traversal import breadth_first_order, depth_first_order, \
+/scratch/gpfs/kuangy/programs/python_libs/lib64/python2.6/site-packages/scipy/sparse/csgraph/__init__.py:152: RuntimeWarning: compiletime version 2.6 of module 'scipy.sparse.csgraph._min_spanning_tree' does not match runtime version 2.7
+  from ._min_spanning_tree import minimum_spanning_tree

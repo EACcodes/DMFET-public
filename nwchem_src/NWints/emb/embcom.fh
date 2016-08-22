@@ -1,0 +1,12 @@
+c     Variables that is needed in the embedding integrals
+c
+      logical :: lembed, nlembed 
+      integer :: n1, n2, n3, nunipt, g_pot
+      double precision :: vol, volelm
+      double precision :: rlatv(3,3), shift(3)
+      double precision, parameter :: ANGSTR=0.529177249D+00
+      double precision, parameter :: PI=3.141592653589793D0
+
+      common /embcom/ n1,n2,n3,nunipt,vol,volelm,rlatv,shift,lembed
+     &                ,nlembed,g_pot
+      save /embcom/
