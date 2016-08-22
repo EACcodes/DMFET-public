@@ -7,7 +7,7 @@
 		mkdir /embnwchem/path/
 		cd /embnwchem/path/
 
- * The current patch is only compatible with Nwchem-6.5, the source code of which can be found in tigress-hsm. Obtain the code and unpack it:
+	The current patch is only compatible with Nwchem-6.5, the source code of which can be found in tigress-hsm. Obtain the code and unpack it:
 
  		cp /tigress-hsm/kuangy/compile/Nwchem-6.5.revision26243-src.2014-09-10.tar.gz ./
 		tar xfvz Nwchem-6.5.revision26243-src.2014-09-10.tar.gz
