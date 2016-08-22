@@ -159,6 +159,8 @@
 
 	These define the charge & spin (i.e., the number of unpaired electrons) in the total/cluster/environment calculations.
 
+	Note the tag lembed/lnlembed specifies if it is a local/nonlocal embedding calculation. In the reference calculation, no embedding needs to be employed, thus both tags are set to 0.
+
 ### 3. Outputs
 
 * **run.log**: the log file for the OEP optimization.
