@@ -160,11 +160,11 @@ task dft property
            Job information
            ---------------
 
-    hostname        = tiger-r14n2
+    hostname        = tiger-r7c2n10
     program         = /scratch/gpfs/kuangy/compile/Nwchem_emb/Nwchem-6.5-nlemb/bin/LINUX64/nwchem
-    date            = Sat Aug 20 16:17:24 2016
+    date            = Sun Nov 12 16:10:09 2017
 
-    compiled        = Sat_Aug_20_11:09:57_2016
+    compiled        = Mon_May_08_21:11:14_2017
     source          = /scratch/gpfs/kuangy/compile/Nwchem_emb/Nwchem-6.5-nlemb
     nwchem branch   = 6.5
     nwchem revision = 26243
@@ -173,7 +173,7 @@ task dft property
     prefix          = cluster.
     data base       = ./cluster.db
     status          = startup
-    nproc           =        1
+    nproc           =       16
     time left       =     -1s
 
 
@@ -587,73 +587,69 @@ task dft property
    Time after variat. SCF:      0.2
    Time prior to 1st pass:      0.2
 
- Grid_pts file          = /scratch/kuangy/cluster.gridpts.0
+ Grid_pts file          = /scratch/kuangy/cluster.gridpts.00
  Record size in doubles =  12289        No. of grid_pts per rec  =   3070
- Max. records in memory =    104        Max. recs in file   = *********
+ Max. records in memory =      8        Max. recs in file   =  63328179
 
  sigma= .10D-01 eFermi=  0.32218 T*S=  0.00E+00 nel(1)=   18.00 nel(
 
            Memory utilization after 1st SCF pass: 
-           Heap Space remaining (MW):        2.00             1996092
+           Heap Space remaining (MW):        3.18             3175836
           Stack Space remaining (MW):        3.28             3276452
 
    convergence    iter        energy       DeltaE   RMS-Dens  Diis-err    time
  ---------------- ----- ----------------- --------- --------- ---------  ------
- d= 0,ls=0.0,diis     1   -460.2019328752 -4.60D+02  6.72D-02  1.84D+00     0.7
+ d= 0,ls=0.0,diis     1   -460.2019327215 -4.60D+02  6.72D-02  1.84D+00     0.4
  sigma= .10D-01 eFermi=  0.35950 T*S= -1.90E-04 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis     2   -460.3290385305 -1.27D-01  3.00D-02  6.39D-01     1.1
- Grid integrated density:      18.000000307679
+ d= 0,ls=0.0,diis     2   -460.3290382749 -1.27D-01  3.00D-02  6.39D-01     0.5
+ Grid integrated density:      18.000000256257
  Requested integration accuracy:   0.10E-06
  sigma= .10D-01 eFermi=  0.34738 T*S= -5.36E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis     3   -460.4056688745 -7.66D-02  6.62D-03  3.15D-03     1.5
- Grid integrated density:      18.000000291503
+ d= 0,ls=0.0,diis     3   -460.4056686960 -7.66D-02  6.62D-03  3.15D-03     0.6
+ Grid integrated density:      18.000000265654
  Requested integration accuracy:   0.10E-06
  sigma= .10D-01 eFermi=  0.34760 T*S= -5.51E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis     4   -460.4069378701 -1.27D-03  6.19D-05  4.74D-03     1.9
- Grid integrated density:      18.000000254478
+ d= 0,ls=0.0,diis     4   -460.4069378025 -1.27D-03  6.17D-05  4.74D-03     0.7
+ Grid integrated density:      18.000000254320
  Requested integration accuracy:   0.10E-06
- sigma= .10D-01 eFermi=  0.33831 T*S= -2.08E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis     5   -460.4068775216  6.03D-05  1.58D-03  5.02D-03     2.3
- Grid integrated density:      18.000000247106
+ sigma= .10D-01 eFermi=  0.33830 T*S= -2.09E-05 nel(1)=   18.00 nel(
+ d= 0,ls=0.0,diis     5   -460.4068776869  6.01D-05  1.58D-03  5.02D-03     0.9
+ Grid integrated density:      18.000000247357
  Requested integration accuracy:   0.10E-06
  sigma= .10D-01 eFermi=  0.33750 T*S= -1.83E-05 nel(1)=   18.00 nel(
   Resetting Diis
- d= 0,ls=0.0,diis     6   -460.4073180378 -4.41D-04  3.39D-04  6.14D-05     2.8
- Grid integrated density:      18.000000245506
+ d= 0,ls=0.0,diis     6   -460.4073179040 -4.40D-04  3.37D-04  6.33D-05     1.0
+ Grid integrated density:      18.000000245380
  Requested integration accuracy:   0.10E-06
- sigma= .10D-01 eFermi=  0.33718 T*S= -1.90E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis     7   -460.4073310458 -1.30D-05  7.77D-05  9.78D-07     3.2
- Grid integrated density:      18.000000245322
+ sigma= .10D-01 eFermi=  0.33717 T*S= -1.90E-05 nel(1)=   18.00 nel(
+ d= 0,ls=0.0,diis     7   -460.4073310120 -1.31D-05  7.84D-05  1.00D-06     1.1
+ Grid integrated density:      18.000000245093
  Requested integration accuracy:   0.10E-06
  sigma= .10D-01 eFermi=  0.33721 T*S= -1.91E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis     8   -460.4073307819  2.64D-07  3.96D-05  1.73D-07     3.6
- Grid integrated density:      18.000000245795
+ d= 0,ls=0.0,diis     8   -460.4073308217  1.90D-07  4.01D-05  2.28D-07     1.2
+ Grid integrated density:      18.000000245688
  Requested integration accuracy:   0.10E-06
  sigma= .10D-01 eFermi=  0.33718 T*S= -1.90E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis     9   -460.4073305659  2.16D-07  3.59D-05  1.41D-07     4.1
- Grid integrated density:      18.000000245048
+ d= 0,ls=0.0,diis     9   -460.4073305559  2.66D-07  3.65D-05  1.60D-07     1.4
+ Grid integrated density:      18.000000244935
  Requested integration accuracy:   0.10E-06
  sigma= .10D-01 eFermi=  0.33718 T*S= -1.90E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis    10   -460.4073308951 -3.29D-07  3.51D-05  1.91D-08     4.5
- Grid integrated density:      18.000000245335
+ d= 0,ls=0.0,diis    10   -460.4073308898 -3.34D-07  3.59D-05  1.62D-08     1.5
+ Grid integrated density:      18.000000245210
  Requested integration accuracy:   0.10E-06
- sigma= .10D-01 eFermi=  0.33718 T*S= -1.90E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis    11   -460.4073308093  8.58D-08  1.03D-05  5.37D-10     4.9
- Grid integrated density:      18.000000245200
- Requested integration accuracy:   0.10E-06
- sigma= .10D-01 eFermi=  0.33718 T*S= -1.90E-05 nel(1)=   18.00 nel(
- d= 0,ls=0.0,diis    12   -460.4073308344 -2.51D-08  1.99D-06  6.35D-11     5.4
+ sigma= .10D-01 eFermi=  0.33717 T*S= -1.90E-05 nel(1)=   18.00 nel(
+ d= 0,ls=0.0,diis    11   -460.4073308081  8.17D-08  9.93D-06  4.95D-10     1.6
 
 
-         Total DFT energy =     -460.407311805046
-      One electron energy =     -641.822789699058
-           Coulomb energy =      209.991458747829
-    Exchange-Corr. energy =      -28.575980853817
+         Total DFT energy =     -460.407311782841
+      One electron energy =     -641.822701936757
+           Coulomb energy =      209.991364566059
+    Exchange-Corr. energy =      -28.575974412143
  Nuclear repulsion energy =        0.000000000000
 
- Numeric. integr. density =       18.000000245200
+ Numeric. integr. density =       18.000000245210
 
-     Total iterative time =      5.2s
+     Total iterative time =      1.4s
 
 
  
@@ -666,83 +662,83 @@ task dft property
   ----- ------------  ---------------      ----- ------------  ---------------
     16      0.996519  5 Cl s          
  
- Vector    2  Occ=2.000000D+00  E=-9.113178D+00
+ Vector    2  Occ=2.000000D+00  E=-9.113181D+00
               MO Center= -2.4D-02,  1.8D+00, -3.0D-02, r^2= 6.6D-02
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
     17      1.028534  5 Cl s                 16     -0.285946  5 Cl s          
  
- Vector    3  Occ=2.000000D+00  E=-6.948581D+00
+ Vector    3  Occ=2.000000D+00  E=-6.948585D+00
               MO Center= -2.4D-02,  1.8D+00, -3.0D-02, r^2= 5.8D-02
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
     19      0.990191  5 Cl py         
  
- Vector    4  Occ=2.000000D+00  E=-6.860987D+00
+ Vector    4  Occ=2.000000D+00  E=-6.860991D+00
               MO Center= -2.4D-02,  1.8D+00, -3.0D-02, r^2= 5.7D-02
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    18      0.850399  5 Cl px                20     -0.510884  5 Cl pz         
+    18      0.850366  5 Cl px                20     -0.510940  5 Cl pz         
  
- Vector    5  Occ=2.000000D+00  E=-6.860952D+00
+ Vector    5  Occ=2.000000D+00  E=-6.860956D+00
               MO Center= -2.4D-02,  1.8D+00, -3.0D-02, r^2= 5.7D-02
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    20      0.850238  5 Cl pz                18      0.510711  5 Cl px         
+    20      0.850204  5 Cl pz                18      0.510767  5 Cl px         
  
- Vector    6  Occ=2.000000D+00  E=-5.647396D-01
+ Vector    6  Occ=2.000000D+00  E=-5.647410D-01
               MO Center= -2.7D-02,  2.0D+00, -3.4D-02, r^2= 7.5D-01
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    21      0.750825  5 Cl s                 17     -0.375976  5 Cl s          
-    25      0.361727  5 Cl s                 23      0.162272  5 Cl py         
+    21      0.750826  5 Cl s                 17     -0.375976  5 Cl s          
+    25      0.361727  5 Cl s                 23      0.162273  5 Cl py         
  
- Vector    7  Occ=2.000000D+00  E=-6.022251D-02
+ Vector    7  Occ=2.000000D+00  E=-6.022366D-02
               MO Center= -2.7D-02,  1.8D+00, -3.0D-02, r^2= 1.2D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    22      0.703200  5 Cl px                26      0.387088  5 Cl px         
-    18     -0.271461  5 Cl px                24      0.210304  5 Cl pz         
+    22      0.703207  5 Cl px                26      0.387090  5 Cl px         
+    18     -0.271464  5 Cl px                24      0.210282  5 Cl pz         
  
- Vector    8  Occ=2.000000D+00  E=-5.956224D-02
+ Vector    8  Occ=2.000000D+00  E=-5.956343D-02
               MO Center= -2.2D-02,  1.8D+00, -3.1D-02, r^2= 1.2D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    24      0.703346  5 Cl pz                28      0.387101  5 Cl pz         
-    20     -0.271519  5 Cl pz                22     -0.210643  5 Cl px         
+    24      0.703353  5 Cl pz                28      0.387104  5 Cl pz         
+    20     -0.271522  5 Cl pz                22     -0.210621  5 Cl px         
  
- Vector    9  Occ=1.999648D+00  E= 3.119065D-01
+ Vector    9  Occ=1.999648D+00  E= 3.119056D-01
               MO Center= -1.2D-02,  1.0D+00, -1.6D-02, r^2= 1.2D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    23      0.564108  5 Cl py                 4     -0.367389  1 bq py         
-    19     -0.224872  5 Cl py                 6     -0.204628  1 bq s          
-     8     -0.203836  1 bq py                21     -0.152201  5 Cl s          
+    23      0.564109  5 Cl py                 4     -0.367389  1 bq py         
+    19     -0.224873  5 Cl py                 6     -0.204628  1 bq s          
+     8     -0.203835  1 bq py                21     -0.152202  5 Cl s          
  
- Vector   10  Occ=3.521695D-04  E= 3.624441D-01
-              MO Center=  1.5D-01, -4.0D-01, -3.7D-02, r^2= 1.5D+00
+ Vector   10  Occ=3.520894D-04  E= 3.624442D-01
+              MO Center=  1.5D-01, -4.0D-01, -3.6D-02, r^2= 1.5D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-     6      0.389665  1 bq s                 11      0.300292  2 bq s          
-    15      0.230264  4 bq s                 13      0.192123  3 bq s          
-     8     -0.153844  1 bq py         
+     6      0.389667  1 bq s                 11      0.300279  2 bq s          
+    15      0.230242  4 bq s                 13      0.192160  3 bq s          
+     8     -0.153845  1 bq py         
  
- Vector   11  Occ=0.000000D+00  E= 4.020447D-01
+ Vector   11  Occ=0.000000D+00  E= 4.020431D-01
               MO Center= -2.3D-01, -2.3D-01,  2.8D-01, r^2= 2.4D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    13      0.586567  3 bq s                  9      0.472199  1 bq pz         
-    15     -0.348128  4 bq s                 11     -0.210646  2 bq s          
-     7     -0.176861  1 bq px         
+    13      0.586560  3 bq s                  9      0.472189  1 bq pz         
+    15     -0.348122  4 bq s                 11     -0.210691  2 bq s          
+     7     -0.176887  1 bq px         
  
- Vector   12  Occ=0.000000D+00  E= 4.178921D-01
+ Vector   12  Occ=0.000000D+00  E= 4.178932D-01
               MO Center=  8.7D-02, -2.2D-01, -2.3D-01, r^2= 2.4D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-     7      0.492048  1 bq px                11      0.484291  2 bq s          
-    15     -0.447736  4 bq s                  9      0.189920  1 bq pz         
+     7      0.492041  1 bq px                11      0.484279  2 bq s          
+    15     -0.447751  4 bq s                  9      0.189945  1 bq pz         
  
- Vector   13  Occ=0.000000D+00  E= 7.886900D-01
+ Vector   13  Occ=0.000000D+00  E= 7.886894D-01
               MO Center=  7.6D-03,  8.8D-01,  2.5D-02, r^2= 2.8D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
@@ -750,55 +746,55 @@ task dft property
     27     -0.816360  5 Cl py                21     -0.634573  5 Cl s          
      2     -0.375945  1 bq s                  4     -0.366689  1 bq py         
     25      0.300313  5 Cl s                 19     -0.240937  5 Cl py         
-    15      0.201494  4 bq s          
+    15      0.201495  4 bq s          
  
- Vector   14  Occ=0.000000D+00  E= 8.975335D-01
+ Vector   14  Occ=0.000000D+00  E= 8.975327D-01
               MO Center= -1.3D-02,  1.7D+00, -4.9D-02, r^2= 2.9D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    28     -1.121347  5 Cl pz                24      1.036230  5 Cl pz         
-    26      0.568049  5 Cl px                22     -0.524262  5 Cl px         
-    13      0.466963  3 bq s                 20     -0.268023  5 Cl pz         
-    15     -0.263755  4 bq s                 11     -0.225903  2 bq s          
+    28     -1.121344  5 Cl pz                24      1.036226  5 Cl pz         
+    26      0.568055  5 Cl px                22     -0.524268  5 Cl px         
+    13      0.466964  3 bq s                 20     -0.268022  5 Cl pz         
+    15     -0.263751  4 bq s                 11     -0.225904  2 bq s          
  
- Vector   15  Occ=0.000000D+00  E= 9.127473D-01
+ Vector   15  Occ=0.000000D+00  E= 9.127467D-01
               MO Center= -5.7D-02,  1.7D+00, -4.7D-02, r^2= 2.9D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    26     -1.129437  5 Cl px                22      1.037032  5 Cl px         
-    28     -0.564887  5 Cl pz                24      0.519221  5 Cl pz         
-    11      0.395975  2 bq s                 15     -0.378575  4 bq s          
-    18     -0.268255  5 Cl px         
+    26     -1.129435  5 Cl px                22      1.037030  5 Cl px         
+    28     -0.564893  5 Cl pz                24      0.519226  5 Cl pz         
+    11      0.395974  2 bq s                 15     -0.378576  4 bq s          
+    18     -0.268254  5 Cl px         
  
- Vector   16  Occ=0.000000D+00  E= 1.589626D+00
+ Vector   16  Occ=0.000000D+00  E= 1.589625D+00
               MO Center=  1.0D-02,  8.7D-02, -6.3D-02, r^2= 2.8D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-     2      0.867557  1 bq s                 15     -0.688175  4 bq s          
-    11     -0.614976  2 bq s                 27     -0.532702  5 Cl py         
-    13     -0.472636  3 bq s                 23      0.423873  5 Cl py         
+     2      0.867558  1 bq s                 15     -0.688172  4 bq s          
+    11     -0.614971  2 bq s                 27     -0.532702  5 Cl py         
+    13     -0.472643  3 bq s                 23      0.423872  5 Cl py         
      6      0.396466  1 bq s                  4     -0.258778  1 bq py         
     21      0.258826  5 Cl s                  8     -0.227573  1 bq py         
  
- Vector   17  Occ=0.000000D+00  E= 1.778684D+00
+ Vector   17  Occ=0.000000D+00  E= 1.778683D+00
               MO Center= -4.9D-02,  5.2D-02,  1.7D-01, r^2= 3.1D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-    13     -1.541366  3 bq s                  9      1.455627  1 bq pz         
-     7     -1.164282  1 bq px                11      0.927446  2 bq s          
-    15      0.507348  4 bq s                 28     -0.420757  5 Cl pz         
-    12     -0.365116  3 bq s                 26      0.329793  5 Cl px         
-    10      0.242035  2 bq s          
+    13     -1.541364  3 bq s                  9      1.455634  1 bq pz         
+     7     -1.164274  1 bq px                11      0.927442  2 bq s          
+    15      0.507359  4 bq s                 28     -0.420759  5 Cl pz         
+    12     -0.365118  3 bq s                 26      0.329791  5 Cl px         
+    10      0.242032  2 bq s          
  
  Vector   18  Occ=0.000000D+00  E= 1.811160D+00
               MO Center=  4.2D-02,  4.5D-02, -1.2D-01, r^2= 3.1D+00
    Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
   ----- ------------  ---------------      ----- ------------  ---------------
-     7      1.454721  1 bq px                15      1.397932  4 bq s          
-     9      1.162523  1 bq pz                11     -1.150050  2 bq s          
-    26     -0.407927  5 Cl px                14      0.378381  4 bq s          
-    28     -0.330785  5 Cl pz                10     -0.324504  2 bq s          
-    13     -0.266378  3 bq s          
+     7      1.454727  1 bq px                15      1.397931  4 bq s          
+     9      1.162515  1 bq pz                11     -1.150056  2 bq s          
+    26     -0.407929  5 Cl px                14      0.378379  4 bq s          
+    28     -0.330782  5 Cl pz                10     -0.324506  2 bq s          
+    13     -0.266369  3 bq s          
  
  Vector   19  Occ=0.000000D+00  E= 1.933131D+00
               MO Center= -4.4D-02,  2.1D+00, -2.9D-02, r^2= 3.3D+00
@@ -827,19 +823,19 @@ task dft property
      0   0 0 0     -1.000000     -9.000000     -9.000000     17.000000
  
      1   1 0 0      0.016522      0.391805      0.391805     -0.767089
-     1   0 1 0     -1.249062    -29.424799    -29.424799     57.600535
-     1   0 0 1      0.021014      0.495599      0.495599     -0.970185
+     1   0 1 0     -1.249065    -29.424800    -29.424800     57.600535
+     1   0 0 1      0.021013      0.495599      0.495599     -0.970185
  
-     2   2 0 0    -10.374549     -5.204581     -5.204581      0.034613
-     2   1 1 0      0.044926      1.322014      1.322014     -2.599102
-     2   1 0 1     -0.001093     -0.022435     -0.022435      0.043778
-     2   0 2 0    -13.748176   -104.457079   -104.457079    195.165982
-     2   0 1 1      0.055866      1.671556      1.671556     -3.287247
-     2   0 0 2    -10.374650     -5.215009     -5.215009      0.055368
+     2   2 0 0    -10.374535     -5.204574     -5.204574      0.034613
+     2   1 1 0      0.044903      1.322003      1.322003     -2.599102
+     2   1 0 1     -0.001081     -0.022429     -0.022429      0.043778
+     2   0 2 0    -13.748172   -104.457077   -104.457077    195.165982
+     2   0 1 1      0.055938      1.671592      1.671592     -3.287247
+     2   0 0 2    -10.374648     -5.215008     -5.215008      0.055368
  
   Nonlocal Vemb matrix loaded successfully.
 
- Task  times  cpu:        5.4s     wall:        5.5s
+ Task  times  cpu:        1.6s     wall:        1.9s
  
  
                                 NWChem Input Module
@@ -858,116 +854,116 @@ task dft property
                          ------------------------------
 
        create   destroy   get      put      acc     scatter   gather  read&inc
-calls:  211      208     2.37e+04 1078     1.74e+04    0        0      902     
-number of processes/call 1.00e+00 1.00e+00 1.00e+00 0.00e+00 0.00e+00
-bytes total:             9.35e+06 1.27e+06 6.00e+06 0.00e+00 0.00e+00 7.22e+03
-bytes remote:            0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
-Max memory consumed for GA by this process: 250880 bytes
+calls:  222      219     1886      436      980        0        0     2403     
+number of processes/call 1.76e+00 1.80e+00 1.59e+00 0.00e+00 0.00e+00
+bytes total:             2.09e+06 3.91e+05 1.00e+06 0.00e+00 0.00e+00 1.92e+04
+bytes remote:            1.35e+06 2.22e+05 5.68e+05 0.00e+00 0.00e+00 0.00e+00
+Max memory consumed for GA by this process: 50688 bytes
  
 MA_summarize_allocated_blocks: starting scan ...
-heap block 'schwarz: shells', handle 14, address 0x2b92308996c8:
+heap block 'schwarz: shells', handle 31, address 0x2ab81172d6c8:
 	type of elements:		integer
 	number of elements:		11
-	address of client space:	0x2b9230899740
-	index for client space:		5988333980985
+	address of client space:	0x2ab81172d740
+	index for client space:		5871230924089
 	total number of bytes:		216
-heap block 'schwarz: atoms', handle 13, address 0x2b92308961f8:
+heap block 'schwarz: atoms', handle 30, address 0x2ab81172a1f8:
 	type of elements:		integer
 	number of elements:		1
-	address of client space:	0x2b9230896280
-	index for client space:		5988333979297
+	address of client space:	0x2ab81172a280
+	index for client space:		5871230922401
 	total number of bytes:		152
-heap block 'for txs scratch', handle 12, address 0x2b92308985f8:
+heap block 'for txs scratch', handle 29, address 0x2ab81172c5f8:
 	type of elements:		double precision
 	number of elements:		520
-	address of client space:	0x2b9230898680
-	index for client space:		5988333980465
+	address of client space:	0x2ab81172c680
+	index for client space:		5871230923569
 	total number of bytes:		4304
-heap block 'txs-pnl mapping1', handle 10, address 0x2b9230897d40:
+heap block 'txs-pnl mapping1', handle 21, address 0x2ab81172bd40:
 	type of elements:		double precision
 	number of elements:		262
-	address of client space:	0x2b9230897dc0
-	index for client space:		5988333980185
+	address of client space:	0x2ab81172bdc0
+	index for client space:		5871230923289
 	total number of bytes:		2232
-heap block 'texas basis/nuc', handle 9, address 0x2b9230896638:
+heap block 'texas basis/nuc', handle 20, address 0x2ab81172a638:
 	type of elements:		double precision
 	number of elements:		719
-	address of client space:	0x2b92308966c0
-	index for client space:		5988333979449
+	address of client space:	0x2ab81172a6c0
+	index for client space:		5871230922553
 	total number of bytes:		5896
-heap block 'sph 2 cart scale arryy', handle 4, address 0x2b9230896598:
+heap block 'sph 2 cart scale arryy', handle 15, address 0x2ab81172a598:
 	type of elements:		double precision
 	number of elements:		6
-	address of client space:	0x2b9230896600
-	index for client space:		5988333979425
+	address of client space:	0x2ab81172a600
+	index for client space:		5871230922529
 	total number of bytes:		160
-heap block 'sph 2 cart trans array cmp', handle 3, address 0x2b92308964d8:
+heap block 'sph 2 cart trans array cmp', handle 14, address 0x2ab81172a4d8:
 	type of elements:		double precision
 	number of elements:		10
-	address of client space:	0x2b9230896540
-	index for client space:		5988333979401
+	address of client space:	0x2ab81172a540
+	index for client space:		5871230922505
 	total number of bytes:		192
-heap block 'sph 2 cart trans array cmp', handle 2, address 0x2b9230896418:
+heap block 'sph 2 cart trans array cmp', handle 13, address 0x2ab81172a418:
 	type of elements:		double precision
 	number of elements:		10
-	address of client space:	0x2b9230896480
-	index for client space:		5988333979377
+	address of client space:	0x2ab81172a480
+	index for client space:		5871230922481
 	total number of bytes:		192
-heap block ' ptrs array inverse xlm sph 2 c', handle 1, address 0x2b9230896398:
+heap block ' ptrs array inverse xlm sph 2 c', handle 12, address 0x2ab81172a398:
 	type of elements:		integer
 	number of elements:		2
-	address of client space:	0x2b9230896400
-	index for client space:		5988333979345
+	address of client space:	0x2ab81172a400
+	index for client space:		5871230922449
 	total number of bytes:		128
-heap block ' ptrs array xlm sph 2 cart', handle 0, address 0x2b9230896318:
+heap block ' ptrs array xlm sph 2 cart', handle 11, address 0x2ab81172a318:
 	type of elements:		integer
 	number of elements:		2
-	address of client space:	0x2b9230896380
-	index for client space:		5988333979329
+	address of client space:	0x2ab81172a380
+	index for client space:		5871230922433
 	total number of bytes:		128
-heap block ' ibs_cn2bfr    3', handle 122, address 0x2b9230896060:
+heap block ' ibs_cn2bfr    3', handle 5, address 0x2ab81172a060:
 	type of elements:		integer
 	number of elements:		38
-	address of client space:	0x2b92308960c0
-	index for client space:		5988333979241
+	address of client space:	0x2ab81172a0c0
+	index for client space:		5871230922345
 	total number of bytes:		408
-heap block ' ibs_cn2ucn    3', handle 121, address 0x2b9230895f60:
+heap block ' ibs_cn2ucn    3', handle 4, address 0x2ab811729f60:
 	type of elements:		integer
 	number of elements:		19
-	address of client space:	0x2b9230895fc0
-	index for client space:		5988333979209
+	address of client space:	0x2ab811729fc0
+	index for client space:		5871230922313
 	total number of bytes:		256
-heap block ' ibs_cn2ce     3', handle 120, address 0x2b9230895e58:
+heap block ' ibs_cn2ce     3', handle 3, address 0x2ab811729e58:
 	type of elements:		integer
 	number of elements:		19
-	address of client space:	0x2b9230895ec0
-	index for client space:		5988333979177
+	address of client space:	0x2ab811729ec0
+	index for client space:		5871230922281
 	total number of bytes:		264
-heap block ' ibs_ce2cnr    3', handle 119, address 0x2b9230895d70:
+heap block ' ibs_ce2cnr    3', handle 2, address 0x2ab811729d70:
 	type of elements:		integer
 	number of elements:		10
-	address of client space:	0x2b9230895e00
-	index for client space:		5988333979153
+	address of client space:	0x2ab811729e00
+	index for client space:		5871230922257
 	total number of bytes:		232
-heap block ' ibs_ce2uce    3', handle 118, address 0x2b9230895cd8:
+heap block ' ibs_ce2uce    3', handle 1, address 0x2ab811729cd8:
 	type of elements:		integer
 	number of elements:		5
-	address of client space:	0x2b9230895d40
-	index for client space:		5988333979129
+	address of client space:	0x2ab811729d40
+	index for client space:		5871230922233
 	total number of bytes:		152
-heap block ' basis exps and coeffs  3', handle 117, address 0x2b92308956b8:
+heap block ' basis exps and coeffs  3', handle 0, address 0x2ab8117296b8:
 	type of elements:		double precision
 	number of elements:		178
-	address of client space:	0x2b9230895740
-	index for client space:		5988333978953
+	address of client space:	0x2ab811729740
+	index for client space:		5871230922057
 	total number of bytes:		1568
-heap block ' ibs_cn2bfr    2', handle 27, address 0x2b9230895520:
+heap block ' ibs_cn2bfr    2', handle 27, address 0x2ab811729520:
 	type of elements:		integer
 	number of elements:		38
-	address of client space:	0x2b9230895580
-	index for client space:		5988333978881
+	address of client space:	0x2ab811729580
+	index for client space:		5871230921985
 	total number of bytes:		408
-heap block ' ibs_cn2ucn    2', ha 
+heap block ' ibs_cn2ucn    2', handle 2 
  
                                      CITATION
                                      --------
@@ -1002,36 +998,36 @@ heap block ' ibs_cn2ucn    2', ha
    K. Glaesemann, G. Sandrone, M. Stave, H. Taylor, G. Thomas, J. H. van Lenthe,
                                A. T. Wong, Z. Zhang.
 
- Total times  cpu:        5.4s     wall:        5.6s
-ndle 26, address 0x2b9230895420:
+ Total times  cpu:        1.6s     wall:        2.0s
+6, address 0x2ab811729420:
 	type of elements:		integer
 	number of elements:		19
-	address of client space:	0x2b9230895480
-	index for client space:		5988333978849
+	address of client space:	0x2ab811729480
+	index for client space:		5871230921953
 	total number of bytes:		256
-heap block ' ibs_cn2ce     2', handle 25, address 0x2b9230895318:
+heap block ' ibs_cn2ce     2', handle 25, address 0x2ab811729318:
 	type of elements:		integer
 	number of elements:		19
-	address of client space:	0x2b9230895380
-	index for client space:		5988333978817
+	address of client space:	0x2ab811729380
+	index for client space:		5871230921921
 	total number of bytes:		264
-heap block ' ibs_ce2cnr    2', handle 24, address 0x2b9230895230:
+heap block ' ibs_ce2cnr    2', handle 24, address 0x2ab811729230:
 	type of elements:		integer
 	number of elements:		10
-	address of client space:	0x2b92308952c0
-	index for client space:		5988333978793
+	address of client space:	0x2ab8117292c0
+	index for client space:		5871230921897
 	total number of bytes:		232
-heap block ' ibs_ce2uce    2', handle 23, address 0x2b9230895198:
+heap block ' ibs_ce2uce    2', handle 23, address 0x2ab811729198:
 	type of elements:		integer
 	number of elements:		5
-	address of client space:	0x2b9230895200
-	index for client space:		5988333978769
+	address of client space:	0x2ab811729200
+	index for client space:		5871230921873
 	total number of bytes:		152
-heap block ' basis exps and coeffs  2', handle 22, address 0x2b9230894b78:
+heap block ' basis exps and coeffs  2', handle 22, address 0x2ab811728b78:
 	type of elements:		double precision
 	number of elements:		178
-	address of client space:	0x2b9230894c00
-	index for client space:		5988333978593
+	address of client space:	0x2ab811728c00
+	index for client space:		5871230921697
 	total number of bytes:		1568
 MA_summarize_allocated_blocks: scan completed: 22 heap blocks, 0 stack blocks
 MA usage statistics:
@@ -1040,8 +1036,8 @@ MA usage statistics:
 					      heap	     stack
 					      ----	     -----
 	current number of blocks	        22	         0
-	maximum number of blocks	        28	        57
+	maximum number of blocks	        28	        56
 	current total bytes		     19360	         0
-	maximum total bytes		  10245640	  22511208
-	maximum total K-bytes		     10246	     22512
-	maximum total M-bytes		        11	        23
+	maximum total bytes		    807688	  22511208
+	maximum total K-bytes		       808	     22512
+	maximum total M-bytes		         1	        23

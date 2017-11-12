@@ -114,7 +114,7 @@ c     Read the file
        do i = 1,nbf
             call ga_get(g_dens, 1, nbf, i, i, dbl_mb(k_dens),1)
             do j = 1,nbf
-               write(unitno,'(E18.8)',advance='no') dbl_mb(k_dens+j-1)
+               write(unitno,'(E25.15)',advance='no') dbl_mb(k_dens+j-1)
                if ( mod(j,5).eq.0 ) write(unitno,'(A)')
      &                              '' ! change line
             enddo

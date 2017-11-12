@@ -37,7 +37,7 @@
 
 ### 2. Configure Wrappers
 
-* All python wrappers are located in /dmfet_codes/optimizer_wrappers. The submission code is **submit.sh**, which generates the run script that calls **optimize.py** when submitted via SLURM scheduler. **optimize.py** then interfaces with embedding Nwchem to perform OEP optimization. 
+* All python wrappers are located in `/dmfet_codes/optimizer_wrappers`. The submission code is **submit.sh**, which generates the run script that calls **optimize.py** when submitted via SLURM scheduler. **optimize.py** then interfaces with embedding Nwchem to perform OEP optimization. 
 
 	**optimize.py** calls the l-bfgs function from scipy, so make sure both **python2.7** and **scipy** packages are available.
 
@@ -74,9 +74,15 @@
 
 * Run example:
 
-		./submit.sh -np 1 -walltime 1:00:00 ch3ch2br
-
+		# Initial run with smearing width 0.05 Ha
+		./submit.sh -np 16 -walltime 1:00:00 -mem 5000mb ch3ch2br
+		# Refine resulting potential using smaller smearing width (0.005 Ha) and tighter SCF convergence condition
+		cp optimize.refine.py optimize.py
+		./submit.sh -np 16 -walltime 1:00:00 -mem 5000mb ch3ch2br
+ 
 	Here, you can use **-np** and **-walltime** options to set the number of processors and walltime. And **ch3ch2br** is the job name, which has to match the input file name **ch3ch2br.xyz** and **ch3ch2br.input**
+	
+	***NOTE***: Here you can see two runs: the initial one uses a larger smearing width and loser SCF convergence thresholds. The second one further refines the results of the first run using smaller smearing width and tighter SCF convergence thresholds. This procedure is generally recommended in all DMFET calculations, unless you found a smarter way to converge the calculation :)
 
 * The reference output is in **/dmfet_codes/examples/dmfet/reference/**.
 
@@ -106,7 +112,7 @@
 
 			restart_embpot = 'embpot.dat.final'
 
-* In **optimize.py**, line 14-59: 
+* In **optimize.py**, line 14-72: 
 
 	* Specify the basis file name:
 
@@ -140,22 +146,33 @@
 
 		***NOTE***: Different to the python convention, the atom index starts from 1 (instead of 0) here!
 
+	* Set up the positions of the capping (point charge) potentials.
+	
+			pc_setting_cluster="""x y z chg"""
+			pc_setting_environ="""x y z chg"""
+			
+		***TIP***: **calculate_capping_potential.py** can be used to generate the positions of the capping charges. For example, run the following command (`1` and `5` in the command line indicates the two carbon atoms that connect the cluster and the environment):
+		
+		```
+		./calculate_capping_position.py ../examples/dmfet/ch3ch2br.xyz 1 5
+		```				
+
 	* Set the ECPs in Nwchem format:
 
 			ecp_setting="""
 			...
 			"""
  
-* In **optimize.py**, line 71 & 91 & 94:
+* In **optimize.py**, line 85 & 105 & 109:
 
 		calc_ref = nwchem_calculator( '%s'%jobname, '%s.xyz'%jobname, basis='read:%s'%bas\
 		           , method=method, lembed=0, lnlembed=0 )
 
 		calc_cluster = nwchem_calculator( 'cluster', 'cluster.xyz', basis='read:%s'%bas \
-                                , method=method, lembed=0, lnlembed=1, charge= 0, spin=1 )
+                                , method=method, lembed=0, lnlembed=1, charge= -1, spin=1 )
 
 		calc_environ = nwchem_calculator( 'environ', 'environ.xyz', basis='read:%s'%bas \
-                                , method=method, lembed=0, lnlembed=1, charge= 0, spin=1 )
+                                , method=method, lembed=0, lnlembed=1, charge= 1, spin=1 )
 
 	These define the charge & spin (i.e., the number of unpaired electrons) in the total/cluster/environment calculations.
 

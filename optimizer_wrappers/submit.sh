@@ -8,7 +8,7 @@ NPROC=1
 NODES=0
 PPN=0
 SERIAL=0
-
+MEM="5000mb"
 
 while [ $# -gt 0 ]
 do
@@ -18,6 +18,7 @@ do
     (-*ppn) PPN="$2"; shift;;
     (-*walltime) TIME="$2"; shift;;
     (-*serial) SERIAL=1; NPROC=1; NODES=1; PPN=8;;
+    (-*mem) MEM="$2"; shift;;
     (-*) echo "$0: error - unrecognized option $1" 1>&2; exit 1;;
     (*)  break;;
     esac
@@ -62,7 +63,7 @@ cat >> $TARGET << EOF
 #!/bin/bash
 #SBATCH --export=ALL
 #SBATCH --job-name=$NAME
-#SBATCH -N $NODES -n $NPROC -t $TIME --mem 5000mb
+#SBATCH -N $NODES -n $NPROC -t $TIME --mem $MEM
 #SBATCH --tasks-per-node=$PPN
 
 cd  \$SLURM_SUBMIT_DIR

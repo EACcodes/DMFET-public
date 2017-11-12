@@ -14,21 +14,34 @@ restart_embpot = 'embpot.dat.final'
 bas='lanl2dz.bas'
 dft_b3lyp="""\
  dft
- iterations 150
+ iterations 200
  xc b3lyp
-# convergence energy 1.0e-5
-# convergence density 1.0e-4
+ #tolerances tight
+ #convergence energy 1.0e-8
+ #convergence density 1.0e-7
+ #convergence gradient 1.0e-6
  grid fine
  smear 0.05
  vectors input INIT.MOVECS output OUT.MOVECS\
 """
 hf="""\
- uhf
+ hf
  maxiter 150\
 """
 method = dft_b3lyp
 cluster_atoms = [1,2,3,4]
 environ_atoms = [5,6,7,8]
+
+pc_setting_cluster="""\
+bq
+      0.11216457      1.08420644     -0.00393857 1
+end
+"""
+pc_setting_environ="""\
+bq
+      0.00000000      0.00000000      0.00000000 -1
+end
+"""
 
 ecp_setting="""\
 ECP
@@ -57,6 +70,7 @@ Br D
 2      1.6633189              9.4818270        
 END\
 """
+
 # read embedding input files
 ifile_ref = emb_input_file_class( '%s.input'%jobname )
 ifile_cluster = emb_input_file_class( 'cluster.input' )
@@ -69,7 +83,7 @@ xyzfn = ifile_ref.xyzfn
 
 # print embpot.dat and nlembpot.dat for reference calculation
 calc_ref = nwchem_calculator( '%s'%jobname, '%s.xyz'%jobname, basis='read:%s'%bas\
-           , method=method, lembed=0, lnlembed=0 )
+           , method=method, lembed=0, lnlembed=0, charge=0, spin=0, nproc=16, mem="5000 mb" )
 calc_ref.extra_settings.append(ecp_setting)
 calc_ref.set_path('ref')
 if i_restart == 0: # a fresh start, no reference exists
@@ -89,11 +103,13 @@ rho_ref = calc_ref.read_gradient()
 
 # setup cluster and environ calculator
 calc_cluster = nwchem_calculator( 'cluster', 'cluster.xyz', basis='read:%s'%bas \
-                                , method=method, lembed=0, lnlembed=1, charge= 0, spin=1 )
+                                , method=method, lembed=0, lnlembed=1, charge=-1, spin=0, nproc=16, mem="5000 mb" )
 calc_cluster.extra_settings.append(ecp_setting)
+calc_cluster.extra_settings.append(pc_setting_cluster)
 calc_environ = nwchem_calculator( 'environ', 'environ.xyz', basis='read:%s'%bas \
-                                , method=method, lembed=0, lnlembed=1, charge= 0, spin=1 )
+                                , method=method, lembed=0, lnlembed=1, charge= 1, spin=0, nproc=16, mem="5000 mb" )
 calc_environ.extra_settings.append(ecp_setting)
+calc_environ.extra_settings.append(pc_setting_environ)
 # set dummy atoms
 calc_cluster.set_ghosts( environ_atoms )
 calc_environ.set_ghosts( cluster_atoms )
@@ -121,6 +137,9 @@ def Lagrangian( params, *args ):
     # read result
     W = -( calc_cluster.read_energy() + calc_environ.read_energy() - dot(params, rho_ref) )
     grad = -( calc_cluster.read_gradient() + calc_environ.read_gradient() - rho_ref )
+    if eval_counter == 0 and i_restart == 0:
+        os.system('cp -r cluster cluster.0')
+        os.system('cp -r environ environ.0')
     # output
     eval_counter += 1
     print >>logfile, '--------------------'
@@ -166,7 +185,7 @@ if i_restart:
 #    print '%15.6e%20.8e'%(i*delta,results[i+dn])
 
 # the real optimization
-x,f,d = optimize.fmin_l_bfgs_b( Lagrangian, x0=extpot0, args=(), pgtol=1e-07 )
+x,f,d = optimize.fmin_l_bfgs_b( Lagrangian, x0=extpot0, args=(), factr=1e4, pgtol=1e-05 )
 print_embedding_pot( x, ndim, 'embpot.dat.final' )
 print >>logfile, d['warnflag']
 if d['warnflag'] == 2:

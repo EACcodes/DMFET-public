@@ -52,6 +52,9 @@ def print_nlembedding_pot( data, nbas, nlembpotfn='nlembpot.dat' ):
 
 def read_nlembedding_pot( nbas, nlembpotfn='nlembpot.dat' ):
     nlembpot = []
+    if not os.path.isfile(nlembpotfn):
+        print 'WARNING: fail to fetch file %s, just return zero array to keep code running'%nlembpotfn
+        return zeros(nbas**2)
     ifile = file( nlembpotfn, 'r' )
     for line in ifile:
         words = line.split()
@@ -456,6 +459,9 @@ class nwchem_calculator(molpro_calculator):
         else:
             line = commands.getoutput('grep Total\ SCF\ energy %s/%s.log '%(self.runpath, self.jobname))
         words = line.split('=')
+        if len(words) == 0:
+            print 'Warning: possible unconverged calculation, check %s\n Return -1e4 Ha to keep OEP going...'%self.runpath
+            return -10000.0
         return float(words[1])
     def read_gradient(self):
         ifn =  '%s/densmat.dat'%self.runpath
